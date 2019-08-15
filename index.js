@@ -18,22 +18,9 @@ class ConfirmGoogleCaptcha extends Component {
     hide = () => {
         this.setState({ show: false });
     }
-    onMessage = event => {
-        if (event && event.nativeEvent.data) {
-            console.log(event.nativeEvent.data);
-            if (event.nativeEvent.data === 'cancel') {
-                this.hide();
-                return;
-            }
-        }
-        let timer = setTimeout(() => {
-            this.hide();
-            clearTimeout(timer);
-        }, 1500);
-    };
     render() {
         let { show } = this.state;
-        let { siteKey, baseUrl, languageCode } = this.props;
+        let { siteKey, baseUrl, languageCode, onMessage } = this.props;
         return (
             <Modal
                 useNativeDriver
@@ -48,7 +35,7 @@ class ConfirmGoogleCaptcha extends Component {
                     <GoogleReCaptcha
                         url={baseUrl}
                         siteKey={siteKey}
-                        onMessage={this.onMessage}
+                        onMessage={onMessage}
                         languageCode={languageCode}
                     />
                 </View>
@@ -65,6 +52,7 @@ const styles = StyleSheet.create({
 ConfirmGoogleCaptcha.propTypes = {
     siteKey: PropTypes.string.isRequired,
     baseUrl: PropTypes.string,
+    onMessage: PropTypes.func,
     languageCode: PropTypes.string
 }
 export default ConfirmGoogleCaptcha;
