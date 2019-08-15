@@ -58,8 +58,8 @@ class App extends React.Component  {
 ```
 DEMO
 ```
-![iOS](http://www.giphy.com/gifs/McUy4MlCvQwVIUqOcN)
-![Android](http://www.giphy.com/gifs/RgbiP3Bs9Ye60z1mXE)
+![iOS](ios.gif)
+![Android](android.gif)
 
 
 
