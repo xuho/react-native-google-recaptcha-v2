@@ -29,7 +29,6 @@ class App extends React.Component  {
                 setTimeout(() => {
                     console.log('Verified code from Google', event.nativeEvent.data);
                     this.captchaForm.hide();
-                    Actions.ListProfile();
                 }, 1500);
             }
         }
