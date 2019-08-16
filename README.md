@@ -26,9 +26,10 @@ class App extends React.Component  {
                 this.captchaForm.hide();
                 return;
             } else {
+                console.log('Verified code from Google', event.nativeEvent.data);
                 setTimeout(() => {
-                    console.log('Verified code from Google', event.nativeEvent.data);
                     this.captchaForm.hide();
+                    // do what ever you want here
                 }, 1500);
             }
         }
