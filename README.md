@@ -8,7 +8,8 @@ Thanks to https://github.com/aaronisme/rn-recaptcha
 
 ## Add it to your project
 
-1. Run `npm install react-native-google-recaptcha-v2` or `yarn add react-native-google-recaptcha-v2`
+1. Run `npm install react-native-google-recaptcha-v2` 
+   or  `yarn add react-native-google-recaptcha-v2`
 2. `import ConfirmGoogleCaptcha from 'react-native-google-recaptcha-v2';`
 
 ## Usage
@@ -20,17 +21,18 @@ const siteKey = 'you_site_key';
 const baseUrl = 'base_url';
 class App extends React.Component  {
     onMessage = event => {
-        if (event && event.nativeEvent.data) {
-            console.log('Verified code from Google',event.nativeEvent.data);
-            if (event.nativeEvent.data === 'cancel') {
+         if (event && event.nativeEvent.data) {
+            if (['cancel', 'error', 'expired'].includes(event.nativeEvent.data)) {
                 this.captchaForm.hide();
                 return;
+            } else {
+                setTimeout(() => {
+                    console.log('Verified code from Google', event.nativeEvent.data);
+                    this.captchaForm.hide();
+                    Actions.ListProfile();
+                }, 1500);
             }
         }
-        let timer = setTimeout(() => {
-            this.captchaForm.hide();
-            clearTimeout(timer);
-        }, 1500);
     };
     render() {
         return (
