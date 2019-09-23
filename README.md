@@ -76,6 +76,7 @@ DEMO
 - **`baseUrl`** _(String)_ The url domain defined on your Google Recaptcha.
 - **`onMessage`** _(Function)_ - The callback function  after received response, error of Google captcha or when user cancel
 - **`languageCode`** _(String)_ - Language to be display of captcha form. Can be found at [this link](https://developers.google.com/recaptcha/docs/language)
+- **`cancelButtonText`** _(String)_ - Title of cancel button.
 
 
 **MIT Licensed**

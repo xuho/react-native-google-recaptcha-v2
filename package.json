@@ -1,6 +1,6 @@
 {
 	"name": "react-native-google-recaptcha-v2",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Implement Google recaptcha v2 in React Native (both Android an iOS)",
 	"main": "index.js",
 	"scripts": {

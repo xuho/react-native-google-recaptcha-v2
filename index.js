@@ -20,7 +20,7 @@ class ConfirmGoogleCaptcha extends Component {
     }
     render() {
         let { show } = this.state;
-        let { siteKey, baseUrl, languageCode, onMessage } = this.props;
+        let { siteKey, baseUrl, languageCode, onMessage, cancelButtonText } = this.props;
         return (
             <Modal
                 useNativeDriver
@@ -37,6 +37,7 @@ class ConfirmGoogleCaptcha extends Component {
                         siteKey={siteKey}
                         onMessage={onMessage}
                         languageCode={languageCode}
+                        cancelButtonText={cancelButtonText}
                     />
                 </View>
             </Modal>
@@ -53,6 +54,7 @@ ConfirmGoogleCaptcha.propTypes = {
     siteKey: PropTypes.string.isRequired,
     baseUrl: PropTypes.string,
     onMessage: PropTypes.func,
-    languageCode: PropTypes.string
+    languageCode: PropTypes.string,
+    cancelButtonText: PropTypes.string
 }
 export default ConfirmGoogleCaptcha;
