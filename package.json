@@ -1,33 +1,33 @@
 {
-	"name": "react-native-google-recaptcha-v2",
-	"version": "1.0.4",
-	"description": "Implement Google recaptcha v2 in React Native (both Android an iOS)",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/xuho/react-native-google-recaptcha-v2.git"
-	},
-	"keywords": [
-		"react-native",
-		"google",
-		"recaptcha",
-		"captcha",
-		"mobile",
-		"ios",
-		"android"
-	],
-	"author": "xuho",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/xuho/react-native-google-recaptcha-v2/issues"
-	},
-	"homepage": "https://github.com/xuho/react-native-google-recaptcha-v2#readme",
-	"peerDependencies": {
-		"react": "*",
-		"react-native": "*",
-		"react-native-modal": "^11.0.1"
-	}
+  "name": "react-native-google-recaptcha-v2",
+  "version": "1.0.4",
+  "description": "Implement Google recaptcha v2 in React Native (both Android an iOS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuho/react-native-google-recaptcha-v2.git"
+  },
+  "keywords": [
+    "react-native",
+    "google",
+    "recaptcha",
+    "captcha",
+    "mobile",
+    "ios",
+    "android"
+  ],
+  "author": "xuho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuho/react-native-google-recaptcha-v2/issues"
+  },
+  "homepage": "https://github.com/xuho/react-native-google-recaptcha-v2#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-modal": "^11.5.1"
+  }
 }
