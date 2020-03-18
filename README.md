@@ -13,6 +13,14 @@
 2. Import package
 `import ConfirmGoogleCaptcha from 'react-native-google-recaptcha-v2';`
 
+
+## Dependencies
+
+1. [react-native-modal](https://github.com/react-native-community/react-native-modal)
+
+2. [react-native-webview](https://github.com/react-native-community/react-native-webview)
+
+
 ## Usage
 
 ### Check demo in [Snack link](https://snack.expo.io/@xuho95/react-native-google-recaptcha-v2)
@@ -62,11 +70,17 @@ class App extends React.Component  {
 }
 ```
 
-```
-DEMO
-```
-![iOS](https://github.com/xuho/demo-images/blob/master/ios.gif)
-![Android](https://github.com/xuho/demo-images/blob/master/android.gif)
+### Note
+You can `import GoogleReCaptcha from 'react-native-google-recaptcha-v2/GoogleReCaptcha';` to customize UI by yourself 
+
+
+## DEMO
+
+### iOS
+![iOS](https://github.com/xuho/demo-images/blob/master/ios.gif?raw=true)
+
+### Android
+![Android](https://github.com/xuho/demo-images/blob/master/android.gif?raw=true)
 
 
 

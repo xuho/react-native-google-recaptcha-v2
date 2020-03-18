@@ -1,16 +1,15 @@
 import React from 'react';
-import { WebView } from 'react-native';
+import WebView from 'react-native-webview';
 
-// fix https://github.com/facebook/react-native/issues/10865
 const patchPostMessageJsCode = `(${String(function () {
-	var originalPostMessage = window.postMessage;
+	var originalPostMessage = window.ReactNativeWebView.postMessage;
 	var patchedPostMessage = function (message, targetOrigin, transfer) {
 		originalPostMessage(message, targetOrigin, transfer);
 	};
 	patchedPostMessage.toString = function () {
 		return String(Object.hasOwnProperty).replace('hasOwnProperty', 'postMessage');
 	};
-	window.postMessage = patchedPostMessage;
+	window.ReactNativeWebView.postMessage = patchedPostMessage
 })})();`;
 
 /**
@@ -34,17 +33,17 @@ const GoogleReCaptcha = ({ onMessage, siteKey, style, url, languageCode, cancelB
 				<script type="text/javascript"> 
 				var onloadCallback = function() { };  
 				var onDataCallback = function(response) { 
-					window.postMessage(response);  
+					window.ReactNativeWebView.postMessage(response);  
 					setTimeout(function () {
 						document.getElementById('captcha').style.display = 'none';
 					}, 1500);
 				};  
 				var onCancel = function() {  
-					window.postMessage("cancel"); 
+					window.ReactNativeWebView.postMessage("cancel"); 
 					document.getElementById('captcha').style.display = 'none';
 				}
-				var onDataExpiredCallback = function(error) {  window.postMessage("expired"); };  
-				var onDataErrorCallback = function(error) {  window.postMessage("error"); } 
+				var onDataExpiredCallback = function(error) {  window.ReactNativeWebView.postMessage("expired"); };  
+				var onDataErrorCallback = function(error) {  window.ReactNativeWebView.postMessage("error"); } 
 				</script> 
 				<style>
 					.btn {
