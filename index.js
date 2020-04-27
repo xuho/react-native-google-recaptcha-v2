@@ -27,7 +27,7 @@ class ConfirmGoogleCaptcha extends Component {
                 hideModalContentWhileAnimating
                 deviceHeight={height}
                 deviceWidth={width}
-                style={styles.modal}
+                style={[styles.modal, modalStyle]}
                 animationIn="fadeIn"
                 animationOut='fadeOut'
                 isVisible={show}>
@@ -55,6 +55,7 @@ ConfirmGoogleCaptcha.propTypes = {
     baseUrl: PropTypes.string,
     onMessage: PropTypes.func,
     languageCode: PropTypes.string,
-    cancelButtonText: PropTypes.string
+    cancelButtonText: PropTypes.string,
+    modalStyle: PropTypes.object
 }
 export default ConfirmGoogleCaptcha;
