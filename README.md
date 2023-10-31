@@ -93,4 +93,8 @@ You can `import GoogleReCaptcha from 'react-native-google-recaptcha-v2/GoogleReC
 - **`cancelButtonText`** _(String)_ - Title of cancel button.
 
 
+## License
 **MIT Licensed**
+
+## Support me
+<a href="https://www.buymeacoffee.com/xuho" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
