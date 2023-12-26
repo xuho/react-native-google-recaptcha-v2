@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
-    View, StyleSheet, Dimensions
+    Modal, View, StyleSheet, Dimensions
 } from 'react-native';
-import Modal from 'react-native-modal';
 import GoogleReCaptcha from './GoogleReCaptcha';
 import PropTypes from 'prop-types';
 
@@ -23,14 +22,10 @@ class ConfirmGoogleCaptcha extends Component {
         let { siteKey, baseUrl, languageCode, onMessage, cancelButtonText } = this.props;
         return (
             <Modal
-                useNativeDriver
-                hideModalContentWhileAnimating
-                deviceHeight={height}
-                deviceWidth={width}
                 style={styles.modal}
                 animationIn="fadeIn"
                 animationOut='fadeOut'
-                isVisible={show}>
+                visible={show}>
                 <View style={styles.wrapper}>
                     <GoogleReCaptcha
                         url={baseUrl}
